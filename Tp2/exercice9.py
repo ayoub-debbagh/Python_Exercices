@@ -1,15 +1,16 @@
-print("1 : euro en mad", "2 : mad en euro", sep="\n")
-conversion = input("Quel operation voullez vous effectuer?")
 
+print("1 : euro en mad", "2 : mad en euro", sep="\n")
+conversion = int(input("Quel operation voullez vous effectuer?"))
 value = float(input("Entrer le montant : "))
 
 match conversion:
     case 1:
-        value *= 11
+        print(f"{value} euro <=> {value * 10.87}  Dh")
     case 2:
-        value /= 11
+        print(f"{value} Dh <=> {value * 10.87}  Euro")
+    case -1:
+        index = False
     case _:
-        pass
+        print("Choisir l'un des deux options")
 
 
-print(value)
